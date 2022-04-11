@@ -16,7 +16,7 @@ endif
 ifeq ($(call is-vendor-board-platform,QCOM),true)
     include $(call all-named-subdir-makefiles,$(display-hals))
 else
-ifneq ($(filter ms% msm% apq%,$(TARGET_BOARD_PLATFORM)),)
+ifneq ($(filter ms% msm% apq% sm6150,$(TARGET_BOARD_PLATFORM)),)
     include $(call all-named-subdir-makefiles,$(display-hals))
 endif
 endif
